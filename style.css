@@ -425,3 +425,204 @@ html{
 .nav-link.active::after{
   width: 100%;
 }
+.copyright {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 14px;
+  color: #bfbfbf;
+  background-color: #000; /* black background */
+  letter-spacing: 0.5px;
+}
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 26px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 15px 0;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 120px 20px 60px;
+    flex-direction: column;
+  }
+
+  .hero-left h1,
+  .hero-right h1 {
+    position: static;
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .hero-left p,
+  .hero-right p {
+    position: static;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .hero-desc span {
+    text-align: center;
+  }
+
+  /* PROJECTS */
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-card {
+    margin: 0;
+  }
+
+  /* SKILLS */
+  .skills-section {
+    padding: 80px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* ABOUT */
+  .about-section {
+    padding: 80px 20px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .about-image {
+    position: static;
+    margin-top: 40px;
+  }
+
+  .about-image img {
+    width: 220px;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact-box {
+    width: 100%;
+  }
+}
+/* ===============================
+   MOBILE NAVBAR FIX
+================================ */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MOBILE VIEW ONLY */
+@media (max-width: 768px) {
+
+  /* show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* hide desktop nav initially */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  /* show nav when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 14px 0;
+    font-size: 18px;
+  }
+
+  /* ❌ HIDE SOCIAL ICONS ON MOBILE */
+  .social {
+    display: none;
+  }
+}
+/* ===== FORCE DESKTOP NAVBAR ===== */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: transparent;
+  }
+
+  .social {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .social {
+    display: none;
+  }
+}
